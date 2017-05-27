@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QLSV_GV", "QLSV_GV\QLSV_GV.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ENTITY", "ENTITY\ENTITY.csproj", "{6ACBC2D0-BADD-438D-82A8-D03273812EAE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Controller", "Controller\Controller.csproj", "{0256B7BE-9D46-48C7-89D2-CFF8D6BD7B00}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{6ACBC2D0-BADD-438D-82A8-D03273812EAE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6ACBC2D0-BADD-438D-82A8-D03273812EAE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6ACBC2D0-BADD-438D-82A8-D03273812EAE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0256B7BE-9D46-48C7-89D2-CFF8D6BD7B00}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0256B7BE-9D46-48C7-89D2-CFF8D6BD7B00}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0256B7BE-9D46-48C7-89D2-CFF8D6BD7B00}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0256B7BE-9D46-48C7-89D2-CFF8D6BD7B00}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
