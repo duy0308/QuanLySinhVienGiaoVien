@@ -33,6 +33,13 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -46,11 +53,26 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Common\DataGridViewButtonImage.cs" />
+    <Compile Include="Common\DataGridViewImageButtonDeleteCell.cs" />
+    <Compile Include="Common\DataGridViewImageButtonSaveCell.cs" />
+    <Compile Include="DanhMuc\HocSinh\DanhSachHocSinh.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DanhMuc\HocSinh\DanhSachHocSinh.Designer.cs">
+      <DependentUpon>DanhSachHocSinh.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmMain.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmMain.Designer.cs">
       <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Helper\SupperTabControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Helper\winform.cs">
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -60,6 +82,12 @@
     <Compile Include="QLSV\ThemSV.Designer.cs">
       <DependentUpon>ThemSV.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="DanhMuc\HocSinh\DanhSachHocSinh.resx">
+      <DependentUpon>DanhSachHocSinh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -72,6 +100,7 @@
     <EmbeddedResource Include="QLSV\ThemSV.resx">
       <DependentUpon>ThemSV.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="Properties\DataSources\ENTITY.Entity.HocSinh.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -86,12 +115,15 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Helper\" />
     <Folder Include="HUONG_DAN_SD\" />
     <Folder Include="QLGV\" />
     <Folder Include="QL_TTGIANGDAY\" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Controller\Controller.csproj">
+      <Project>{0256b7be-9d46-48c7-89d2-cff8d6bd7b00}</Project>
+      <Name>Controller</Name>
+    </ProjectReference>
     <ProjectReference Include="..\ENTITY\ENTITY.csproj">
       <Project>{6acbc2d0-badd-438d-82a8-d03273812eae}</Project>
       <Name>ENTITY</Name>
